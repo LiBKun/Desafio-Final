@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  background: #0a2a43;
+  min-height: 1500px;
+}
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+header.sticky
+{
+  padding: 5px 100px;
+  background: #fff;
+
+}
+header .logo
+{
+  position: relative;
+  font-weight: 700;
+  color:#fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+header ul{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none
+}
+header ul li a
+{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color:#fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition; 0.6s;
+}
+
+section.fundo
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.fundo:after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2a43;
+  z-index: 10000;
+  mix-blend-mode: color;
+}
+section.fundo:before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 10000;
+}
+section.fundo img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+#text
+{
+  position:relative;
+  color: #fff;
+  font-size: 10em;
+  z-index: 1;
+}
+#road
+{
+  z-index: 2;
+
+}
+header.sticky .logo,
+header.sticky ul li a
+{
+  color: #000;
+}
+.menu
+{
+  position: relative;
+  margin-top: 5vh;
+}
+.menu h2
+{
+  font-size: 2.5em;
+  color: #fff;
+}
+.menu h2.Exces
+{
+  margin-top: 80vh;
+}
+.menu  p
+{
+  font-size: 1.2em;
+  color: #fff;
+}
+
+
+section.fotos
+{
+  margin-top: 5vh;
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  border: 2px solid #000;
+}
+section.fotos .slide
+{
+  position: relative;
+  background: #0f0;
+  height: 100%;
+  flex: 1;
+  border-right: 2px solid #000;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+
+}
+section.fotos .slide:last-child
+{
+  border-right: none;
+}
+section.fotos .slide:hover
+{
+  flex-grow: 5 ;
+}
+section.fotos .slide:nth-child(1)
+{
+  background: url(B2.png);
+  background-size: 700px;
+  background-position: center center;
+}
+section.fotos .slide:nth-child(2)
+{
+  background: url(L1.jpg);
+  background-size: 700px;
+  background-position: center center;
+}
+section.fotos .slide:nth-child(3)
+{
+  background: url(B1.jpeg);
+  background-size: 700px;
+  background-position: center center;
+}
+section.fotos .slide:nth-child(4)
+{
+  background: url(L2.jpg);
+  background-size: 700px;
+  background-position: center center;
+}
+section.fotos .slide .content
+{
+  position: absolute;
+  bottom: 0;
+  margin:40px;
+  padding: 30px;
+  background: #000;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(100px);
+}
+section.fotos .slide:hover .content
+{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  transform: translateY(0);
+}
+
+.cont
+{
+  min-height: 500px;
+  top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1100px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.cont .card
+{
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background: #fff;
+  margin: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+.cont .card:hover
+{
+  height: 420px;
+}
+.cont .card .imgBx
+{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.cont .card .imgBx img
+{
+  max-width: 100%;
+  min-height: 100%;
+  border-radius: 4px;
+}
+.cont .card .content
+{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.cont .card:hover .content
+{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+
+
+.contact
+{
+  padding: 100px;
+  background: #162c3b;
+  text-align: center;
+  color: #fff;
+}
+.redbg
+{
+  background: url(red.jpg) !important;
+  background-size: cover;
+  background-position: center;
+}
+.form .inputBx
+{
+  margin-bottom: 40px;
+
+}
+.form .inputBx input
+{
+  width: 100%;
+  background:transparent;
+  box-shadow: none;
+  border:none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.form .inputBx input::placeholder
+{
+  color: #fff;
+}
+
+
+.form .inputBx textarea
+{
+  width: 100%;
+  background:transparent;
+  box-shadow: none;
+  border:none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  min-height: 150px;
+  border-bottom: 2px solid #fff;
+}
+.form .inputBx textarea::placeholder
+{
+  color: #fff;
+}
+.form .inputBx input[type="submit"]
+{
+  width: 150px;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font-weight: 400px;
+}
+
+.footer
+{
+  background: #162c3b;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.footer ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.footer ul li
+{
+  list-style: none;
+}
+.footer ul li a
+{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+.footer ul li a img
+{
+  filter: invert(1);
+  max-width: 20px;
+}
