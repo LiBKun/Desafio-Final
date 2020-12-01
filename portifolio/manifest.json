@@ -10,6 +10,8 @@
 	"theme_color":"#0a2a55",
 	"orientation":"portrait",
 	"description":"Portifolio do Leo",
+	 "related_applications":[],
+	"prefer_related_applications":false,
 	"icons": [
   {
    "src": "icons/android-icon-36x36.png",
@@ -52,7 +54,5 @@
    "sizes": "512x512",
    "type": "image/png"
   }
- ],
- "related_applications":[],
- "prefer_related_applications":false
+ ]
 }
